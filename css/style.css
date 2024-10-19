@@ -1,18 +1,22 @@
-
 body {
-  font-family: 'Roboto', sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
   margin: 0;
   padding: 0;
   background-color: #f4f4f4;
 }
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0.3rem 0;
 }
 nav {
   background-color: #333;
   color: white;
   padding: 10px;
-  
 }
 
 nav .container {
@@ -37,7 +41,7 @@ nav ul li a {
   text-decoration: none;
 }
 
-.logo{
+.logo {
   color: white;
   text-decoration: none;
   font-size: 1.5rem;
@@ -45,11 +49,17 @@ nav ul li a {
 }
 
 .container {
-  width: 90%;
   margin: auto;
-  padding: 20px 0;
+  padding: 20px 5px;
 }
 
+@media only screen and (min-width: 600px) {
+  .container {
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+  }
+}
 
 header {
   background-color: #333;
@@ -82,7 +92,7 @@ header {
   position: relative;
 }
 
-.book:hover { 
+.book:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transform: scale(1.02);
   transition-duration: 300ms;
@@ -93,7 +103,7 @@ header {
   opacity: 1;
   visibility: visible;
 }
-.book .wishlist-btn.heart  {
+.book .wishlist-btn.heart {
   opacity: 1;
   visibility: visible;
 }
@@ -101,6 +111,11 @@ header {
 .wishlist-btn {
   opacity: 0;
   visibility: hidden;
+}
+
+.book{
+  text-decoration: none;
+  color: black;
 }
 
 .book img {
@@ -115,12 +130,12 @@ header {
   color: rgb(58, 57, 57);
 }
 
-.book .wishlist-btn svg:hover{
+.book .wishlist-btn svg:hover {
   fill: red;
   color: red;
 }
 
-.book .wishlist-btn{
+.book .wishlist-btn {
   padding: 2px;
   background-color: #f4f4f4;
   position: absolute;
@@ -130,13 +145,54 @@ header {
   border-radius: 5px;
   border: none;
 }
-.book .wishlist-btn .heart{
+.book .wishlist-btn .heart {
   fill: #ff0000;
   color: red;
 }
 
+.book-image {
+  width: 350px;
+}
+.book-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.book-details div {
+  display: flex;
+  gap: 30px;
+}
+@media screen and (max-width: 550px) {
+  .book-details div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
 
+  .book-details div img {
+    width: 100%;
+  }
 
+}
+.book-details .description {
+  padding-top: 20px;
+  border-top: 1px solid #d7d5d5;
+}
+#bookDetails {
+  padding: 10px 10px;
+}
+
+.book-details div div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.book-info {
+  padding: 15px 0;
+}
+.book-details div div h2 {
+  font-size: 30px;
+}
 #pagination {
   display: flex;
   gap: 10px;
@@ -145,8 +201,7 @@ header {
   margin: 20px 0;
 }
 
-
-#pagination button  {
+#pagination button {
   padding: 10px 20px;
   background: #151515;
   color: #f4f4f4;
@@ -156,11 +211,11 @@ header {
   cursor: pointer;
 }
 
-#pagination button:hover  {
+#pagination button:hover {
   padding: 10px 20px;
   background: #353535;
 }
-#pagination span  {
+#pagination span {
   font-weight: 500;
 }
 
@@ -184,14 +239,16 @@ button:disabled {
   width: 300px;
 }
 
-.filters{
+.filters {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0;
+  padding: 20px 5px;
 }
 
-.filters input{
+
+
+.filters input {
   width: 300px;
   padding: 12px;
   border: 1px solid #404048;
@@ -199,16 +256,18 @@ button:disabled {
   margin-right: 10px;
 }
 
-.filters select{
+.filters select {
   padding: 12px;
   border: 1px solid #404048;
   border-radius: 50px;
-  margin-right: 10px;
   width: 200px;
 }
-.filters select option{
+.filters select option {
   padding: 12px;
   border: 1px solid #404048;
   border-radius: 50px;
 }
 
+.wishlist-title{
+  padding: 0px 10px;
+}
