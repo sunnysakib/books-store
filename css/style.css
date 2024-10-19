@@ -1,12 +1,214 @@
 
 body {
   font-family: 'Roboto', sans-serif !important;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0.3rem 0;
+}
+nav {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  
 }
 
-h1 {
-  font-family: 'Roboto', sans-serif !important;
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.title{
-  font-family: 'Roboto', sans-serif !important;
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo{
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  padding: 20px 0;
+}
+
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+#bookList {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+.booksDisplay {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.book {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+  width: 200px;
+  background-color: white;
+  position: relative;
+}
+
+.book:hover { 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+  transition-duration: 300ms;
+  animation: box-shadow 300ms ease in 1 forwards running;
+  cursor: pointer;
+}
+.book:hover .wishlist-btn {
+  opacity: 1;
+  visibility: visible;
+}
+.book .wishlist-btn.heart  {
+  opacity: 1;
+  visibility: visible;
+}
+
+.wishlist-btn {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.book img {
+  width: 100%;
+}
+.book .title {
+  font-weight: 500;
+}
+.book .author {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgb(58, 57, 57);
+}
+
+.book .wishlist-btn svg:hover{
+  fill: red;
+  color: red;
+}
+
+.book .wishlist-btn{
+  padding: 2px;
+  background-color: #f4f4f4;
+  position: absolute;
+  display: flex;
+  top: 10px;
+  right: 10px;
+  border-radius: 5px;
+  border: none;
+}
+.book .wishlist-btn .heart{
+  fill: #ff0000;
+  color: red;
+}
+
+
+
+#pagination {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+
+#pagination button  {
+  padding: 10px 20px;
+  background: #151515;
+  color: #f4f4f4;
+  border: none;
+  border-radius: 50px;
+  width: 100px;
+  cursor: pointer;
+}
+
+#pagination button:hover  {
+  padding: 10px 20px;
+  background: #353535;
+}
+#pagination span  {
+  font-weight: 500;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+#loading {
+  height: calc(100vh - 180px);
+  justify-content: center;
+  align-items: center;
+}
+#loading img {
+  height: 300px;
+  width: 300px;
+}
+
+.filters{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.filters input{
+  width: 300px;
+  padding: 12px;
+  border: 1px solid #404048;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+.filters select{
+  padding: 12px;
+  border: 1px solid #404048;
+  border-radius: 50px;
+  margin-right: 10px;
+  width: 200px;
+}
+.filters select option{
+  padding: 12px;
+  border: 1px solid #404048;
+  border-radius: 50px;
+}
+

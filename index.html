@@ -8,10 +8,50 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Books</title>
   </head>
+
   <body>
-    <h1 class="title">Book List</h1>
+    <main>
+      <!-- Navbar -->
+      <nav>
+        <div class="container">
+          <a href="/" class="logo">BookStore</a>
+          <ul>
+            <li><a href="#" id="home-link">Home</a></li>
+            <li><a href="wishlist.html" id="wishlist-link">Wishlist</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <section class="filters">
+        <input type="text" id="searchBar" placeholder="Search for books..." />
+        <select id="genreFilter">
+          <option value="">All Genres</option>
+          <option value="friction">Friction</option>
+          <option value="drama">Drama</option>
+          <option value="children">Children</option>
+        </select>
+      </section>
+      <!-- Loading spinner  -->
+      <div id="loading" style="display: none">
+        <img src="./assets/images/load.gif" alt="" />
+      </div>
+
+      <section id="bookList" class="container" style="display: none"></section>
+
+      <div id="pagination" style="display: none">
+        <button id="prevPage">Previous</button>
+        <span id="currentPage">1</span>
+        <button id="nextPage">Next</button>
+      </div>
+    </main>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
